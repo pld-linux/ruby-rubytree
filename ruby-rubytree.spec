@@ -19,7 +19,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_enable_debug_packages	0
 
 %description
-RubyTree is a Ruby implementation of the generic tree data structure. It provides a node-based model to store keyed node-elements in the tree and simple APIs to access, modify and traverse the structure. RubyTree is node-centric, where individual nodes on the tree are the primary compositional and structural elements. This implementation also mixes in the Enumerable module to allow standard access to the tree as a collection.
+RubyTree is a Ruby implementation of the generic tree data structure.
+It provides a node-based model to store keyed node-elements in the
+tree and simple APIs to access, modify and traverse the structure.
+RubyTree is node-centric, where individual nodes on the tree are the
+primary compositional and structural elements. This implementation
+also mixes in the Enumerable module to allow standard access to the
+tree as a collection.
 
 %package rdoc
 Summary:	HTML documentation for %{pkgname}
