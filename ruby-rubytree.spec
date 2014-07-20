@@ -2,7 +2,7 @@
 Summary:	Ruby implementation of the generic tree data structure
 Name:		ruby-%{pkgname}
 Version:	0.6.2
-Release:	2
+Release:	3
 License:	MIT/Ruby License
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
 # Source0-md5:	04acabb6a1da7271a1505cecbea507cf
