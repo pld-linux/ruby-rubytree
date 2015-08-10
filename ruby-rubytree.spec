@@ -2,21 +2,16 @@
 Summary:	Ruby implementation of the generic tree data structure
 Name:		ruby-%{pkgname}
 Version:	0.6.2
-Release:	3
+Release:	4
 License:	MIT/Ruby License
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
 # Source0-md5:	04acabb6a1da7271a1505cecbea507cf
 Group:		Development/Languages
 URL:		http://rubytree.rubyforge.org/
-BuildRequires:	rpmbuild(macros) >= 1.484
-BuildRequires:	ruby >= 1:1.8.6
-BuildRequires:	ruby-modules
-%{?ruby_mod_ver_requires_eq}
-#BuildArch:	noarch
+BuildRequires:	rpm-rubyprov
+BuildRequires:	rpmbuild(macros) >= 1.665
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-# nothing to be placed there. we're not noarch only because of ruby packaging
-%define		_enable_debug_packages	0
 
 %description
 RubyTree is a Ruby implementation of the generic tree data structure.
@@ -52,21 +47,19 @@ ri documentation for %{pkgname}.
 Dokumentacji w formacie ri dla %{pkgname}.
 
 %prep
-%setup -q -c
-%{__tar} xf %{SOURCE0} -O data.tar.gz | %{__tar} xz
-find -newer README -o -print | xargs touch --reference %{SOURCE0}
+%setup -q
 
 %build
 rdoc --ri --op ri lib
 rdoc --op rdoc lib
-# rm -r ri/NOT_THIS_MODULE_RELATED_DIRS
 rm ri/created.rid
+rm ri/cache.ri
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{ruby_rubylibdir},%{ruby_ridir},%{ruby_rdocdir}}
+install -d $RPM_BUILD_ROOT{%{ruby_vendorlibdir},%{ruby_ridir},%{ruby_rdocdir}}
 
-cp -a lib/* $RPM_BUILD_ROOT%{ruby_rubylibdir}
+cp -a lib/* $RPM_BUILD_ROOT%{ruby_vendorlibdir}
 cp -a ri/* $RPM_BUILD_ROOT%{ruby_ridir}
 cp -a rdoc $RPM_BUILD_ROOT%{ruby_rdocdir}/%{name}-%{version}
 
@@ -76,8 +69,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog History.txt README TODO
-%{ruby_rubylibdir}/tree.rb
-%{ruby_rubylibdir}/tree
+%{ruby_vendorlibdir}/tree.rb
+%{ruby_vendorlibdir}/tree
 
 %files rdoc
 %defattr(644,root,root,755)
