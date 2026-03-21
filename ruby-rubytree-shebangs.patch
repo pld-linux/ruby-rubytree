@@ -1,0 +1,90 @@
+diff -uNr rubytree-2.2.0.orig/examples/example_basic.rb rubytree-2.2.0/examples/example_basic.rb
+--- rubytree-2.2.0.orig/examples/example_basic.rb	2026-03-21 00:51:50.489818938 +0100
++++ rubytree-2.2.0/examples/example_basic.rb	2026-03-21 00:51:50.536340886 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env ruby
++#!/usr/bin/ruby
+ #
+ # example_basic.rb:: Basic usage of the tree library.
+ #
+diff -uNr rubytree-2.2.0.orig/lib/tree/utils/tree_merge_handler.rb rubytree-2.2.0/lib/tree/utils/tree_merge_handler.rb
+--- rubytree-2.2.0.orig/lib/tree/utils/tree_merge_handler.rb	2026-03-21 00:51:50.503152271 +0100
++++ rubytree-2.2.0/lib/tree/utils/tree_merge_handler.rb	2026-03-21 00:51:50.538459076 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env ruby
++#!/usr/bin/ruby
+ #
+ # tree_merge_handler.rb
+ #
+diff -uNr rubytree-2.2.0.orig/spec/spec_helper.rb rubytree-2.2.0/spec/spec_helper.rb
+--- rubytree-2.2.0.orig/spec/spec_helper.rb	2026-03-21 00:51:50.491719048 +0100
++++ rubytree-2.2.0/spec/spec_helper.rb	2026-03-21 00:51:50.540754582 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env ruby
++#!/usr/bin/ruby
+ #
+ # spec_helper.rb
+ #
+diff -uNr rubytree-2.2.0.orig/spec/tree_spec.rb rubytree-2.2.0/spec/tree_spec.rb
+--- rubytree-2.2.0.orig/spec/tree_spec.rb	2026-03-21 00:51:50.491719048 +0100
++++ rubytree-2.2.0/spec/tree_spec.rb	2026-03-21 00:51:50.543260885 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env ruby
++#!/usr/bin/ruby
+ #
+ # tree_spec.rb
+ #
+diff -uNr rubytree-2.2.0.orig/test/run_test.rb rubytree-2.2.0/test/run_test.rb
+--- rubytree-2.2.0.orig/test/run_test.rb	2026-03-21 00:51:50.520618013 +0100
++++ rubytree-2.2.0/test/run_test.rb	2026-03-21 00:51:50.545285817 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env ruby
++#!/usr/bin/ruby
+ #
+ # run_test.rb:: Run all the tests from the Ruby command line.
+ #
+diff -uNr rubytree-2.2.0.orig/test/test_binarytree.rb rubytree-2.2.0/test/test_binarytree.rb
+--- rubytree-2.2.0.orig/test/test_binarytree.rb	2026-03-21 00:51:50.520618013 +0100
++++ rubytree-2.2.0/test/test_binarytree.rb	2026-03-21 00:51:50.547172796 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env ruby
++#!/usr/bin/ruby
+ 
+ # test_binarytree.rb - This file is part of the RubyTree package.
+ #
+diff -uNr rubytree-2.2.0.orig/test/test_rubytree_require.rb rubytree-2.2.0/test/test_rubytree_require.rb
+--- rubytree-2.2.0.orig/test/test_rubytree_require.rb	2026-03-21 00:51:50.520618013 +0100
++++ rubytree-2.2.0/test/test_rubytree_require.rb	2026-03-21 00:51:50.549110123 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env ruby
++#!/usr/bin/ruby
+ 
+ # test_rubytree_require.rb - This file is part of the RubyTree package.
+ #
+diff -uNr rubytree-2.2.0.orig/test/test_subclassed_node.rb rubytree-2.2.0/test/test_subclassed_node.rb
+--- rubytree-2.2.0.orig/test/test_subclassed_node.rb	2026-03-21 00:51:50.520618013 +0100
++++ rubytree-2.2.0/test/test_subclassed_node.rb	2026-03-21 00:51:50.551006911 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env ruby
++#!/usr/bin/ruby
+ 
+ # test_subclassed_node.rb - This file is part of the RubyTree package.
+ #
+diff -uNr rubytree-2.2.0.orig/test/test_thread_and_fiber.rb rubytree-2.2.0/test/test_thread_and_fiber.rb
+--- rubytree-2.2.0.orig/test/test_thread_and_fiber.rb	2026-03-21 00:51:50.526485605 +0100
++++ rubytree-2.2.0/test/test_thread_and_fiber.rb	2026-03-21 00:51:50.552798304 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env ruby
++#!/usr/bin/ruby
+ 
+ # test_thread_and_fiber.rb - This file is part of the RubyTree package.
+ #
+diff -uNr rubytree-2.2.0.orig/test/test_tree.rb rubytree-2.2.0/test/test_tree.rb
+--- rubytree-2.2.0.orig/test/test_tree.rb	2026-03-21 00:51:50.526485605 +0100
++++ rubytree-2.2.0/test/test_tree.rb	2026-03-21 00:51:50.554669862 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env ruby
++#!/usr/bin/ruby
+ 
+ # test_tree.rb - This file is part of the RubyTree package.
+ #

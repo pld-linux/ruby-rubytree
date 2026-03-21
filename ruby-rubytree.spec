@@ -2,11 +2,12 @@
 Summary:	A generic tree data structure implementation for Ruby
 Name:		ruby-%{pkgname}
 Version:	2.2.0
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
 # Source0-md5:	4446c9adcb46c73c79dbb320870210f3
+Patch0:		ruby-rubytree-shebangs.patch
 URL:		http://rubytree.rubyforge.org/
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.665
@@ -44,6 +45,7 @@ Dokumentacji w formacie ri dla %{name}.
 
 %prep
 %setup -q -n %{pkgname}-%{version}
+%patch -P0 -p1
 
 %build
 %__gem_helper spec
@@ -58,12 +60,10 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{ruby_vendorlibdir},%{ruby_specdir},%{ruby_ridir},%{ruby_rdocdir},%{_examplesdir}/%{name}-%{version}}
 
 cp -a lib/* $RPM_BUILD_ROOT%{ruby_vendorlibdir}
-find $RPM_BUILD_ROOT%{ruby_vendorlibdir} -type f -name "*.rb" | xargs sed -i -e '1s,/usr/bin/env ruby,%{__ruby},'
 cp -p %{pkgname}-%{version}.gemspec $RPM_BUILD_ROOT%{ruby_specdir}
 cp -a ri/* $RPM_BUILD_ROOT%{ruby_ridir}
 cp -a rdoc $RPM_BUILD_ROOT%{ruby_rdocdir}/%{name}-%{version}
 cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-find $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version} -type f -name "*.rb" | xargs sed -i -e '1s,/usr/bin/env ruby,%{__ruby},'
 
 %clean
 rm -rf $RPM_BUILD_ROOT
